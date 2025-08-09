@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catálogo de Productos</title>
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="contenedor-principal">
+<nav class="menu-navegacion">
+  <h1>
+    <i class="fas fa-car"></i>
+    Electric Car
+    <i class="fas fa-bars menu-icon"></i>
+  </h1>
+  <ul class="menu-lista">
+    <li><a href="#inicio">Inicio</a></li>
+    <li><a href="#catalogo">Catálogo</a></li>
+    <li><a href="#ofertas">Ofertas</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ul>
+
+  <footer class="pie-pagina pie-escritorio" id="contacto">
+    <div class="contacto">
+      <p>Email: contacto@electriccar.cl</p>
+      <p>Tel: +56 2 2345 6789</p>
+    </div>
+    <div class="iconos-redes">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+  </footer>
+</nav>
+
+      <section class="seccion-filtros">
+        <label for="ordenar">Ordenar por:</label>
+        <select id="ordenar">
+          <option value="precio">Precio</option>
+          <option value="nombre">Nombre</option>
+          <option value="Relevancia">Relevancia</option>
+        </select>
+      </section>
+
+      <main class="seccion-principal">
+        <div class="contenedor-productos">
+          <div class="tarjeta-producto">
+            <img src="./assets/img/BMW 330e.jpg" alt="BWM 330e" />
+            <p>Modelo: BWM 330e</p>
+            <button>Ver más</button>
+          </div>
+          <div class="tarjeta-producto">
+            <img src="./assets/img/BMW I3.jpg" alt="BMW I3" />
+            <p>Modelo: BMW I3</p>
+            <button>Ver más</button>
+          </div>
+          <div class="tarjeta-producto">
+            <img src="./assets/img/BMW I8.jpg" alt="BMW I8" />
+            <p>Modelo: BMW I8</p>
+            <button>Ver más</button>
+          </div>
+          <div class="tarjeta-producto">
+            <img
+              src="./assets/img/BYD Dolphin Mini.jpg"
+              alt="BYD Dolphin Mini"
+            />
+            <p>Modelo: BYD Dolphin Mini</p>
+            <button>Ver más</button>
+          </div>
+          <div class="tarjeta-producto">
+            <img src="./assets/img/Chevrolet Bolt.jpg" alt="Chevrolet Bolt" />
+            <p>Modelo: Chevrolet Bolt</p>
+            <button>Ver más</button>
+          </div>
+          <div class="tarjeta-producto">
+            <img src="./assets/img/Dongfeng E70.jpg" alt="Dongfeng E70" />
+            <p>Modelo: Dongfeng E70</p>
+            <button>Ver más</button>
+          </div>
+          <div class="tarjeta-producto">
+            <img src="./assets/img/Hyundai Ioniq.jpg" alt="Hyundai Ioniq" />
+            <p>Modelo: Hyundai Ioniq</p>
+            <button>Ver más</button>
+          </div>
+          <div class="tarjeta-producto">
+            <img src="./assets/img/Maxus EV80.jpg" alt="Maxus EV80" />
+            <p>Modelo: Maxus EV80</p>
+            <button>Ver más</button>
+          </div>
+          <div class="tarjeta-producto">
+            <img src="./assets/img/MG ZS.jpg" alt="MG ZS" />
+            <p>Modelo: MG ZS</p>
+            <button>Ver más</button>
+          </div>
+          <div class="tarjeta-producto">
+            <img src="./assets/img/Nissan Leaf.jpg" alt="Nissan Leaf" />
+            <p>Modelo: Nissan Leaf</p>
+            <button>Ver más</button>
+          </div>
+          <div class="tarjeta-producto">
+            <img src="./assets/img/Porsche Taycan.jpg" alt="Porsche Taycan" />
+            <p>Modelo: Porsche Taycan</p>
+            <button>Ver más</button>
+          </div>
+          <div class="tarjeta-producto">
+            <img
+              src="./assets/img/Renault Kwid e-Tech.jpg"
+              alt="Renault Kwid e-Tech"
+            />
+            <p>Modelo: Renault Kwid e-Tech</p>
+            <button>Ver más</button>
+          </div>
+          <div class="tarjeta-producto">
+            <img src="./assets/img/Tesla Model 3.jpg" alt="Tesla Model 3" />
+            <p>Modelo: Tesla Model 3</p>
+            <button>Ver más</button>
+          </div>
+          <div class="tarjeta-producto">
+            <img src="./assets/img/Tesla Model Y.jpg" alt="Tesla Model Y" />
+            <p>Modelo: Tesla Model Y</p>
+            <button>Ver más</button>
+          </div>
+          <div class="tarjeta-producto">
+            <img src="./assets/img/Volvo EX30.jpg" alt="Volvo EX30" />
+            <p>Modelo: Volvo EX30</p>
+            <button>Ver más</button>
+          </div>
+          <div class="tarjeta-producto">
+            <img src="./assets/img/Volvo s90.jpg" alt="Volvo S90" />
+            <p>Modelo: Volvo S90</p>
+            <button>Ver más</button>
+          </div>
+        </div>
+      </main>
+
+<div class="paginacion" aria-label="Paginación del catálogo">
+  <a href="#" aria-label="Página anterior">«</a>
+  <a href="#">1</a>
+  <a href="#">2</a>
+  <a href="#" id="ofertas">3</a>
+  <a href="#" aria-label="Página siguiente">»</a>
+</div>
+
+
+      </main>
+  <footer class="pie-pagina pie-movil">
+<div class="iconos-redes">
+  <a href="https://www.autofact.cl/blog/noticias/autofact/autos-electricos" 
+     target="_blank" 
+     title="Facebook - Autos Eléctricos">
+    <i class="fab fa-facebook-f"></i>
+  </a>
+
+  <a href="https://www.comparaonline.cl/blog/autos/auto-electrico-mas-barato-chile/" 
+     target="_blank" 
+     title="Instagram - Autos Eléctricos">
+    <i class="fab fa-instagram"></i>
+  </a>
+</div>
+    <p>Todos los derechos reservados</p>
+  </footer>
+</main>
+
+    </div>
+  </body>
+</html>

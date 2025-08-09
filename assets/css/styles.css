@@ -1,0 +1,253 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: #f5f7fa;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.contenedor-principal {
+  display: grid;
+  grid-template-areas:
+    "menu"
+    "filtros"
+    "principal"
+    "paginacion";
+  grid-template-rows: auto auto 1fr auto;
+}
+
+.menu-navegacion {
+  grid-area: menu;
+  background-color: #0a4b85;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.menu-navegacion h1 {
+  font-size: 1rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu-lista {
+  padding: 0 1rem;
+  margin-top: 0.5rem;
+  list-style: none;
+}
+
+.menu-lista li {
+  margin: 0.5rem 0;
+}
+
+.menu-navegacion a {
+  color: white;
+  text-decoration: none;
+}
+
+.menu-icon {
+  display: none;
+}
+
+.seccion-filtros {
+  grid-area: filtros;
+  background-color: #e0e0e0;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.seccion-principal {
+  grid-area: principal;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.contenedor-productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+  padding: 1.5rem;
+  justify-content: center;
+}
+
+.tarjeta-producto {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 1rem;
+}
+
+.tarjeta-producto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.tarjeta-producto img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 0.75rem;
+  border-radius: 8px;
+  filter: grayscale(100%);
+  transition: filter 0.5s ease;
+}
+
+.tarjeta-producto img:hover {
+  filter: grayscale(0%);
+}
+
+.tarjeta-producto h3 {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+
+.tarjeta-producto button,
+.tarjeta-producto a {
+  background-color: #003366;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  text-decoration: none;
+}
+
+.tarjeta-producto button:hover,
+.tarjeta-producto a:hover {
+  background-color: #0055aa;
+}
+
+.paginacion {
+  grid-area: paginacion;
+  display: flex;
+  justify-content: center;
+  gap: 0.3rem;
+  margin: 0.3rem 0;
+}
+
+.paginacion a {
+  padding: 0.4rem 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #003366;
+  transition: background-color 0.2s ease;
+}
+.paginacion a:hover {
+  background-color: #003366;
+  color: white;
+}
+
+.pie-pagina {
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+.iconos-redes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+  z-index: 10;  
+  pointer-events: auto; 
+}
+
+.iconos-redes a {
+  color: white;
+  margin: 0 10px;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.pie-movil {
+  display: none;
+  background-color: #002244;
+  color: white;
+  padding: 1rem;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.pie-escritorio {
+  background-color: #002244;
+  color: white;
+    margin-top: auto;
+  width: 100%;
+  padding: .6rem .5rem;
+    position: relative;
+  z-index: 5; 
+}
+
+
+.pie-escritorio .contacto p,
+.pie-movil .contacto p {
+  margin: 0.25rem 0;
+}
+
+/*Laptop*/
+@media (min-width: 577px) {
+  .contenedor-principal {
+    grid-template-columns: 150px 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+      "menu filtros"
+      "menu principal"
+      "menu paginacion";
+    height: 100vh;
+  }
+
+  .menu-lista {
+    display: block;
+  }
+
+  .pie-movil {
+    display: none;
+  }
+}
+
+/*Móvil */
+@media (max-width: 576px) {
+  .menu-lista {
+    display: none;
+  }
+
+  .contenedor-productos {
+    grid-template-columns: 1fr;
+  }
+
+  .pie-escritorio {
+    display: none;
+  }
+
+  .pie-movil {
+    display: flex;
+  }
+}
+
+@media (min-width: 1200px) {
+  .contenedor-productos {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
